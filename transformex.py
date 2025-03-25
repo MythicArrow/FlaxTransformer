@@ -97,7 +97,7 @@ class TransformerBlock(nnx.Module):
 
 
 # Full Transformer Model with Embeddings
-class Transformer(nnx.Module):
+class FlaxTransformer(nnx.Module):
     num_layers: int
     d_model: int
     num_heads: int
@@ -130,4 +130,4 @@ d_model = 6
 num_heads = 12
 d_ff = 4
 vocab_size = 4000
-model = Transformer(num_layers, d_model, num_heads, d_ff, vocab_size)
+model = FlaxTransformer(num_layers, d_model, num_heads, d_ff, vocab_size)
